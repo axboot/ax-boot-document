@@ -7,7 +7,7 @@
     ],
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/axboot/ax-boot-document",
+            "base": "https://github.com/axboot/ax-boot-document/blob/master/",
             "label": "Edit This Page"
         },
         "github": {
