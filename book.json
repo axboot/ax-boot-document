@@ -3,7 +3,8 @@
         "edit-link",
         "github",
         "github-buttons",
-        "ace"
+        "ace",
+        "codeblock"
     ],
     "pluginsConfig": {
         "edit-link": {
