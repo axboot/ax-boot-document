@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        "edit-link",
+        "github",
+        "github-buttons",
+        "ace"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/axboot/ax-boot-framework",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/axboot/ax-boot-framework"
+        }
+    }
+}
