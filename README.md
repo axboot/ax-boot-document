@@ -15,3 +15,58 @@ AXBoot는 AXISJ UI Framework를 개발, 배포 운영했던 경험과 노하우�
 Github : http://github.com/axboot , http://github.com/ax5ui
 
 Demo : http://demo.axboot.com
+
+# AXBoot 소개
+
+## AXBoot 탄생 배경
+- 앞서 1장에서 이야기한것처럼, 웹 애플리케이션 개발에는 다양한 기술이 사용됩니다. 최근에는 더 급격한 속도로 웹 기술이 발전되고 있으며, 아름답고 편리한 UI/UX를 위한 프런트엔드 기술과, 대용량 데이터, 분산처리를 효율적으로 하기위한 백엔드 기술들이 더욱 중요시되고 있고, 각 기술들은 점점 세분화되어 전문성을 요구하고 있습니다. 
+
+---
+
+- 그림1) 프런트엔드 스펙트럼
+![spectrum.png](assets/3294546972B83DFE881C853B483E6654.png)
+출처 : https://www.frontendhandbook.com
+
+---
+
+- 그림2) 프런트엔드 기술 트렌드
+![front-end-skills.png](assets/AFD4014AAED1F0B167C8430973368CFF.png)
+출처 : https://www.frontendhandbook.com
+
+---
+
+- 그림3) 백엔드 영역 프레임워크 점유율
+![report-screen-min.png](assets/48E65A5F9D62235452EDF4FECA47C296.png)
+출처 : https://zeroturnaround.com/
+
+
+---
+
+- 그림4) JVM 기반 언어 점유율
+![TnT-2016-podium-jvm-languages-v1.jpg](assets/4986752B3DAE5A4DC47A3F812CC0FC99.jpg)
+출처 : https://zeroturnaround.com/
+</그림4>
+
+---
+
+- 그림5) 백엔드 기술 도구
+![Screen Shot 2016-09-18 at 3.50.40 PM.png](assets/2C9D46174B758B88F24C9A4FBC83D010.png)
+출처 : https://zeroturnaround.com/
+
+이처럼 현대의 웹 애플리케이션은 수가지~수십가지의 기술들과 도구를 조합하여 개발하게 되며, 개발이 완료된 애플리케이션을 배포하여 운영 할 때에는 더 많은 기술과 도구가 필요합니다. 
+
+더 많은 개발자들이 뛰어난 UI와 안정성을 가진 웹 애플리케이션 개발을 할 수 있도록 지원하고, 대한민국 산업 전반에 웹 애플리케이션 생태계를 바꾸어보고자 AXBoot팀은 수십년간 웹 애플리케이션을 개발하면서 얻게된 노하우와 수십가지의 오픈소스, 자체개발한 Web UI Framework를 하나로 묶어 풀 스택 웹 애플리케이션 프레임워크를 AXBoot 라는 이름으로 개발하여 오픈소스로 공개하게 되었습니다.
+AXBoot를 사용하면 Java, Spring, HTML5 기반의 웹 애플리케이션을 빠르고 쉽게 개발할 수 있으며, 확장성과 유지보수성, 안정성이 뛰어난 웹 애플리케이션을 운영할 수 있습니다.
+
+---
+# AXBoot 특징 및 장점
+
+- AXBoot는 자체개발한 UI Framework와 스프링 프레임워크, 수십개의 오픈소스 컴포넌트들로 이루어진 풀 스택 웹 애플리케이션 개발 프레임워크 입니다. 또한 사용자관리, 시스템 메뉴, 권한 관리, 세션관리 등의 이미 구현된 어드민 팩을 기반으로 즉시 사용가능한 관리 시스템(어드민)을 개발할 수 있습니다. 또한 HTML5, CSS3, JavaScript, Java8, Spring Framework, Maven 등의 표준화된 기술과 널리 사용되는 오픈소스를 기반으로 개발하였기 때문에 기존 웹 애플리케이션 개발자들에게 친숙하고 편리한 프레임워크로 느껴집니다.
+
+- 운영시 발생하는 여러가지 에러들을 사용자 정보와 파라미터, 로그들과 함께 추적하고, 실시간으로 알람을 제공하는 AXBoot 로깅 시스템이 내장되어 있어, 중(소) 규모의 애플리케이션 운영시에는 별도의 로그 수집, 관리, 모니터링 시스템 없이도 안정적인 시스템 운영이 가능합니다.
+
+- Dialog, Toast, Modal, Calendar, Picker, Formatter, Menu, Selector, Combobox, Grid 등 10여가지의 웹 컴포넌트를 제공하고 있으며 해당 컴포넌트들은 CSS를 통해 일관된 룩앤필(Look&Feel) 제어가 가능합니다.
+
+- 자바 기반의 웹 애플리케이션 개발자들이 익숙한 JSP를 템플릿 엔진으로 사용했고, UI 컴포넌트들을 JSP 내에서 쉽고 편리하게 사용할 수 있는 JSTL 확장 태그를 제공합니다.
+
+- Multiline SQL, SQL Mapper, ORM 등 다양한 방식으로 데이터를 영속화 할 수 있으며, 기존 생성된 테이블에 대해서는 Reverse Engineering을 통해 해당 테이블에 CRUD를 위한 Controller, Service, Entity, Repository를 자동으로 생성해주는 Schema Exporter 기능을 제공합니다.
