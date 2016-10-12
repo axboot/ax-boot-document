@@ -6,7 +6,7 @@
         "ace",
         "codeblock",
         "google_code_prettify",
-        "prettify-html",
+        "-prettify-html",
         "-youtube"
     ],
     "pluginsConfig": {
