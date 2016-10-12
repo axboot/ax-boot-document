@@ -8,8 +8,8 @@
 <%@ taglib prefix="ax" tagdir="/WEB-INF/tags" %>
  
 <!-- 레이아웃 전달 하고 싶은 변수를 선언합니다. -->
-<ax:set key="title" value="${pageName}"/>
-<ax:set key="page_desc" value="${PAGE_REMARK}"/>
+<ax:set key="title" value=""/>
+<ax:set key="page_desc" value=""/>
 <ax:set key="page_auto_height" value="true"/>
  
 <!-- 사용하려는 레이아웃 명을 입력합니다. (레이아웃은 WEB-INF > tags > layout 에서 관리됩니다.) -->
