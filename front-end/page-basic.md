@@ -1,7 +1,5 @@
 # 페이지 구조설명
 
-
-## ax:tbl, ax:tr, ax:td
 ```html
 <ax:form name="formView01">
     <input type="hidden" name="hiddenValue" value=""/>
@@ -22,7 +20,3 @@
     </ax:tbl>
 </ax:form>
 ```
-
-**ax:table 출력결과 예**
-
-![ax-table](../assets/ax-table.png)
