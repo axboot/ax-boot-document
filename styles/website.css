@@ -1,4 +1,10 @@
 /* CSS for website */
+.book-summary ul.summary a.custom-link{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #000;
+}
 .book-summary ul.summary li.chapter span{
-    color: #666;
+    color: #787878;
 }
