@@ -7,7 +7,7 @@
         "codeblock",
         "google_code_prettify",
         "prettify-html",
-        "youtube"
+        "-youtube"
     ],
     "pluginsConfig": {
         "edit-link": {
