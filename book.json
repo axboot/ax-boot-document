@@ -2,9 +2,7 @@
     "plugins": [
         "edit-link",
         "github",
-        "github-buttons",
-        "codeblock",
-        "google_code_prettify"
+        "github-buttons"
     ],
     "pluginsConfig": {
         "edit-link": {
