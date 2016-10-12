@@ -4,7 +4,10 @@
         "github",
         "github-buttons",
         "ace",
-        "codeblock"
+        "codeblock",
+        "google_code_prettify",
+        "prettify-html",
+        "youtube"
     ],
     "pluginsConfig": {
         "edit-link": {
