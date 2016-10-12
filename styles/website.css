@@ -1,1 +1,4 @@
 /* CSS for website */
+.book-summary ul.summary li.chapter span{
+    color: #666;
+}
