@@ -76,5 +76,6 @@ AXBOOT에서는 웹 애플리케이션 개발에 필요한 커스텀 태그를 �
     </ax:tbl>
 </ax:form>
 ```
-__ax:table 출력결과 예__
+**ax:table 출력결과 예**
+
 ![ax:table 출력결과 예](../assets/ax-table.png)
