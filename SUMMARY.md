@@ -14,5 +14,6 @@
     - [AXBoot 기반 프레임워크 및 컴포넌트 구성정보](composition/framework-component.md)
 * Front-end 개발 가이드
     - [페이지구조&커스텀태그](front-end/page-basic.md)
+    - [기본템플릿](front-end/basic-template.md)
 * Back-end 개발 가이드
 * [빌드](build.md)
