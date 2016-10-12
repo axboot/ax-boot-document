@@ -3,5 +3,5 @@
 
 }
 .book-summary ul.summary li span{
-  color: #888;
+  color: #888 !important;
 }
