@@ -5,7 +5,8 @@
         "github-buttons",
         "ace",
         "codeblock",
-        "google_code_prettify"
+        "google_code_prettify",
+        "prettify-html"
     ],
     "pluginsConfig": {
         "edit-link": {
