@@ -99,5 +99,125 @@ split-panel안에있는 태그의 속성이 data-fit-height-aside, data-fit-heig
 ```
 
 
-
 ## JS
+
+```js
+var fnObj = {};
+
+var ACTIONS = axboot.actionExtend(fnObj, {
+    PAGE_SEARCH: function(){
+        axboot.ajax({
+            type: "GET",
+            url: "/api/v1/samples/parent",
+            data: caller.searchView.getData(),
+            callback: function (res) {
+                caller.gridView01.setData(res);
+            }
+        });
+        return false;        
+    },
+    dispatch: function(){
+        var result = ACTIONS.exec(caller, act, data);
+        if (result != "error") {
+            return result;
+        } else {
+            // 직접코딩
+            return false;
+        }
+    } 
+});
+```
+
+```js
+// fnObj 기본 함수 스타트와 리사이즈
+fnObj.pageStart = function () {
+    this.pageButtonView.initView();
+    this.searchView.initView();
+    this.gridView01.initView();
+
+    ACTIONS.dispatch(ACTIONS.PAGE_SEARCH);
+};
+
+fnObj.pageResize = function () {
+
+};
+```
+
+```js
+fnObj.pageButtonView = axboot.viewExtend({
+    initView: function () {
+        var _this = this;
+        $('[data-page-btn]').click(function () {
+            _this.onClick(this.getAttribute("data-page-btn"));
+        });
+    },
+    onClick: function (_act) {
+        var _root = fnObj;
+        switch (_act) {
+            case "search":
+                ACTIONS.dispatch(ACTIONS.PAGE_SEARCH);
+                break;
+            case "save":
+                ACTIONS.dispatch(ACTIONS.PAGE_SAVE);
+                break;
+            case "excel":
+                break;
+            case "fn1":
+                break;
+            case "fn2":
+                break;
+            case "fn3":
+                break;
+            case "fn4":
+                break;
+            case "fn5":
+                break;
+        }
+    }
+});
+```
+
+
+```js
+/**
+ * gridView
+ */
+fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
+    initView: function () {
+        var _this = this;
+
+        this.target = axboot.gridBuilder({
+            showRowSelector: true,
+            frozenColumnIndex: 0,
+            multipleSelect: true,
+            target: $('[data-ax5grid="grid-view-01"]'),
+            columns: [
+                {key: "key", label: "KEY", width: 160, align: "left", editor: "text"},
+                {key: "value", label: "VALUE", width: 350, align: "left", editor: "text"},
+                {key: "etc1", label: "ETC1", width: 100, align: "center", editor: "text"},
+                {key: "ect2", label: "ETC2", width: 100, align: "center", editor: "text"},
+                {key: "ect3", label: "ETC3", width: 100, align: "center", editor: "text"},
+                {key: "ect4", label: "ETC4", width: 100, align: "center", editor: "text"}
+            ],
+            body: {
+                onClick: function () {
+                    this.self.select(this.dindex);
+                }
+            }
+        });
+        
+
+        $('[data-grid-view-01-btn]').click(function () {
+            var _act = this.getAttribute("data-grid-view-01-btn");
+            switch (_act) {
+                case "add":
+                    ACTIONS.dispatch(ACTIONS.ITEM_ADD);
+                    break;
+                case "delete":
+                    ACTIONS.dispatch(ACTIONS.ITEM_DEL);
+                    break;
+            }
+        });
+    }
+});
+```
