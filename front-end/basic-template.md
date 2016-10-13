@@ -27,13 +27,15 @@
 페이지에서 사용 할 JS파일을 지정 합니다. `jsp:attribute`는 script뿐 아니라 레이아웃에서 정의한 키 값이면 모두 사용 할 수 있습니다.
 단. AXBOOT에서는 `jsp:body`가 항상 가장 마지막 요소 이어야 하므로 `jsp:attribute`를 먼저 선언 후 `jsp:body`를 마지막에 두어야 합니다.  
 
+`basic.js` 와 같은 프로그램 JS 파일은 레이아웃에 선언된 `axboot.js`에 의해 `fnObj.pageStart`함수가 실행됩니다. 또한 내부에 ACTION & VIEW 패턴으로 코딩 되어 있습니다.
+ACTION & VIEW 패턴에 대해서는 이 장의 아래에서 다루겠습니다.
 
 ```html
     <jsp:body>
         <ax:page-buttons></ax:page-buttons>
 ```
-프로그램이 가진 권한에 따라 페이지의 버튼을 출력 시켜주는 커스텀 태그 입니다. `WEB-INF/tags/page-buttons.tag` 에서 확인 할 수 있습니다.
-
+프로그램과 메뉴가 가진 권한에 따라 페이지의 버튼을 출력 시켜주는 커스텀 태그 입니다. `WEB-INF/tags/page-buttons.tag` 에서 확인 할 수 있습니다.
+원하는 경우 권한을 확장, 또는 커스트 마이징을 할 수 있습니다.
 
 ```html
         <div role="page-header">
@@ -54,7 +56,15 @@
             </ax:form>
             <div class="H10"></div>
         </div>
+```
+프로그램 페이지는 `role="page-header"`, `role="page-content"` 로 나누어 집니다.
+페이지가 시작할 때, 리사이즈 될 때 마다 브라우저의 높이에 맞게 화면을 출력하기 위해 `page-header`를 뺀 나머지 영역을 계산하여 `page-content`의 높이로 자동 계산합니다.
 
+![AXBOOT-페이지롤](../assets/page-layout-role.png)
+
+높이 자동 계산에 대한 스크립트는 `axboot.js`에서 처리 하고 있습니다.
+
+```html
         <ax:split-layout name="ax1" oriental="horizontal">
             <ax:split-panel width="*" style="">
 
@@ -73,7 +83,21 @@
 
             </ax:split-panel>
         </ax:split-layout>
+```
+ax:split-layout 는 `WEB-INF/tags` 에서 커스텀 태그 처리 구문을 확인 할 수 있습니다. 
+커스텀 태그 안에서 `role="page-content"` 속성을 만들어 주고 있어,
+split-layout만 코딩했지만 페이지 높이가 최적화된 화면을 볼 수 있습니다.
+
+레이아웃은 vertical, horizontal 이 있으면 중첩하여 사용 할 수 있습니다. (단, name 값을 한 화면에서 고유 하게 입력 되어야 합니다.)
+
+**split-panel**
+
+split-panel안에있는 태그의 속성이 data-fit-height-aside, data-fit-height-content를 가진다면 패널의 높이 안에서 aside엘리먼트들의 높이를 제외한 나머지 공간을 content가 가지게 됩니다.
+```html
     </jsp:body>
 </ax:layout>
 ```
 
+
+
+## JS
