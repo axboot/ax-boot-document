@@ -103,7 +103,11 @@ split-panel안에있는 태그의 속성이 data-fit-height-aside, data-fit-heig
 
 ```js
 var fnObj = {};
+```
+프로그램 페이지에서 사용하는 변수 입니다. AXBOOT에서는 가급적 글로벌 변수 선언을 제한하는 것을 권장하고 있습니다.
+하나의 프로그램 페이지에는 `ACTIONS`, `fnObj`, `ax5`, `axboot` 등 몇가지를 몇가지 변수만 사용하고 있습니다.
 
+```js
 var ACTIONS = axboot.actionExtend(fnObj, {
     PAGE_SEARCH: function(){
         axboot.ajax({
@@ -127,6 +131,14 @@ var ACTIONS = axboot.actionExtend(fnObj, {
     } 
 });
 ```
+ACTIONS 오브젝트는 `axboot > src > view-action.js` 에서 actionExtend 함수를 이용하여 구현됩니다.
+ACTIONS 내부의 키들(액션명)을 내장된 dispatch 함수가 사용자가 선언한 dispatch 함수를 실행해줍니다.
+사용자의 dispatch 안에서 `ACTIONS.exec`실행하면 액션명으로 정의된 함수를 실행 해줍니다.
+
+ACBOOT의 JS파일은 VIEW들과 ACTIONS 간에 통신을 하여 비즈니스 로직을 처리합니다. 
+각 VIEW들은 내부에서 처리할 로직을 처리하고 외부와의 통신(AJAX, 다른뷰로 요청, 응답등)은 ACTIONS에서 처리합니다.
+
+이런 방식으로 코딩 하면, 뷰와 뷰 사이에 의존성을 제거 하게 되므로 좀 더 유연한 코딩이 가능합니다. 또한 개발자간에 인수 인계 작업도 수월해져 유지보수가 용이합니다.
 
 ```js
 // fnObj 기본 함수 스타트와 리사이즈
