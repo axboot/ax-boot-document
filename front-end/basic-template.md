@@ -155,6 +155,10 @@ fnObj.pageResize = function () {
 };
 ```
 
+각각의 프로그램 페이지는 `head` 태그에 `axboot.js` 를 임포트 하고 있습니다.
+`axboot.js`에서는 `$(document.body).ready`를 사용하여 `axboot.init` > `axboot.pageStart` > `fnObj.pageStart` 가 순차적으로 실행됩니다.
+`fnObj.pageStart`에서는 페이지가 시작할 때 실행 해야하는 액션을 dispatch 하고, 페이지에서 사용중인 뷰들의 `initView` 함수를 실행 하여 각각의 뷰들을 초기화 합니다.
+
 ```js
 fnObj.pageButtonView = axboot.viewExtend({
     initView: function () {
@@ -188,7 +192,8 @@ fnObj.pageButtonView = axboot.viewExtend({
     }
 });
 ```
-
+앞에서도 설명을 드렸지만 뷰 오브젝트는 개별 뷰에서 일어나는 일들만 기술 하는 것을 원칙으로 합니다.
+개별 뷰 외에서 개별뷰의 데이터를 요구하거나 데이터를 변경 해야 할 때는 `getData`, `setData` 함수를 사용합니다.
 
 ```js
 /**
