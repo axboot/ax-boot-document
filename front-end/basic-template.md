@@ -195,6 +195,10 @@ fnObj.pageButtonView = axboot.viewExtend({
 앞에서도 설명을 드렸지만 뷰 오브젝트는 개별 뷰에서 일어나는 일들만 기술 하는 것을 원칙으로 합니다.
 개별 뷰 외에서 개별뷰의 데이터를 요구하거나 데이터를 변경 해야 할 때는 `getData`, `setData` 함수를 사용합니다.
 
+그리드 뷰는 `axboot.gridView` 상속하여 선언합니다. `axboot.gridView`는 `assets/js/axboot/src/view-action.js` 파일에서 확인 할 수있습니다.
+몇몇 메소드는 미리 정의된 함수가 있으므로 기본 기능만 사용하는 경우 정의할 필요가 없습니다.
+
+gridView.initView안에서 `axboot.gridBuilder` 를 실행하여 `ax5ui-grid`를 초기화 하여 target에 연결해줍니다.
 ```js
 /**
  * gridView
