@@ -211,16 +211,12 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
             }
         });
         
-
-        $('[data-grid-view-01-btn]').click(function () {
-            var _act = this.getAttribute("data-grid-view-01-btn");
-            switch (_act) {
-                case "add":
-                    ACTIONS.dispatch(ACTIONS.ITEM_ADD);
-                    break;
-                case "delete":
-                    ACTIONS.dispatch(ACTIONS.ITEM_DEL);
-                    break;
+        axboot.buttonClick(this, "data-grid-view-01-btn", {
+            "add": function () {
+                ACTIONS.dispatch(ACTIONS.ITEM_ADD);
+            },
+            "delete": function () {
+                ACTIONS.dispatch(ACTIONS.ITEM_DEL);
             }
         });
     }
