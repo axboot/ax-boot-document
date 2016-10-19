@@ -112,7 +112,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
     PAGE_SEARCH: function(){
         axboot.ajax({
             type: "GET",
-            url: "/api/v1/samples/parent",
+            url: ["samples", "parent"],
             data: caller.searchView.getData(),
             callback: function (res) {
                 caller.gridView01.setData(res);
@@ -139,6 +139,10 @@ ACBOOT의 JS파일은 VIEW들과 ACTIONS 간에 통신을 하여 비즈니스 �
 각 VIEW들은 내부에서 처리할 로직을 처리하고 외부와의 통신(AJAX, 다른뷰로 요청, 응답등)은 ACTIONS에서 처리합니다.
 
 이런 방식으로 코딩 하면, 뷰와 뷰 사이에 의존성을 제거 하게 되므로 좀 더 유연한 코딩이 가능합니다. 또한 개발자간에 인수 인계 작업도 수월해져 유지보수가 용이합니다.
+
+> axboot.ajax 에서 url 값을 ["samples", "parent"]으로 선언 했습니다 이 부분은 axboot.config.js 에 선언된 `axboot.def["API"]` 에서 정의된 오브젝트로 변환합니다. 
+url에 Array 타입을 선언했다면 Array의 첫번째 인자를 이용하여 `axboot.def["API"]`에서 상세 url을 가져오고 그 뒤로 `/+url[1]` 해서 
+`/api/v1/samples/parent` 라는 주소값을 이용하여 ajax 호출을 하게 됩니다
 
 ```js
 // fnObj 기본 함수 스타트와 리사이즈
@@ -183,6 +187,10 @@ fnObj.pageButtonView = axboot.viewExtend({
 몇몇 메소드는 미리 정의된 함수가 있으므로 기본 기능만 사용하는 경우 정의할 필요가 없습니다.
 
 gridView.initView안에서 `axboot.gridBuilder` 를 실행하여 `ax5ui-grid`를 초기화 하여 target에 연결해줍니다.
+
+> axboot.buttonClick 을 이용하면 버튼을 클릭했을 때 이벤트를 편리하게 다룰 수 있습니다. 
+`button data-page-btn="search"` 라는 버튼을 클릭 했을 때 `search` 함수를 호출해주어 개발자는 버튼의 속성만으로 쉽게 이벤트를 바인딩 할 수 있습니다.
+
 ```js
 /**
  * gridView
@@ -222,3 +230,38 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
     }
 });
 ```
+
+### axboot.gridBuilder
+ax5ui-grid를 제대로 사용하기 위해선 상당한 양의 설정옵션을 다루어야 합니다. 이런 설정들은 대부분은 프로젝트 마다 동일한 패턴으로 반복됩니다.
+또한 페이지적용한 스크립트 옵션과 다르게 콤포넌트가 업데이트 되어 많은 양의 코드를 변경해야 할 수도 있습니다.
+이런 어려움을 해결하기 위해 `gridBuilder`함수를 만들었습니다.
+
+```js
+var defaultGridConfig = {
+    showLineNumber: true,
+    lineNumberColumnWidth: 50,
+    rowSelectorColumnWidth: 28,
+    multipleSelect: false,
+    header: {
+        align: "center",
+        columnHeight: 28
+    },
+    body: {
+        columnHeight: 28,
+        onClick: function () {
+            this.self.select(this.dindex);
+        }
+    },
+    page: {
+        navigationItemCount: 9,
+        height: 30,
+        display: true,
+        firstIcon: '<i class="cqc-controller-jump-to-start"></i>',
+        prevIcon: '<i class="cqc-triangle-left"></i>',
+        nextIcon: '<i class="cqc-triangle-right"></i>',
+        lastIcon: '<i class="cqc-controller-next"></i>'
+    }
+};
+```
+`gridBuilder` 함수는 `js/axboot/src/gridBuilder.js` 파일에서 확인 할 수 있습니다. 위 소스의 내용은 `gridBuilder`에 선언된 그리드 기본 설정 옵션들 입니다.
+ 기본 설정 옵션들은 `gridBuilder` 선언시 재정의한 옵션으로 업데이트 되어 최종 그리드가 만들어 집니다.
