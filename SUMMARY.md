@@ -15,5 +15,7 @@
 * Front-end 개발 가이드
     - [페이지구조&커스텀태그](front-end/page-basic.md)
     - [기본템플릿](front-end/basic-template.md)
+    - [그리드 페이징](front-end/grid-paging.md)
+    - [모달 다루기](front-end/modal-control.md)
 * Back-end 개발 가이드
 * [빌드](build.md)
