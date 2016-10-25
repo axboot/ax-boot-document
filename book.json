@@ -1,7 +1,7 @@
 {
     "plugins": [
         "edit-link",
-        "github",
+        "-github",
         "github-buttons",
         "ga"
     ],
@@ -10,7 +10,7 @@
             "base": "https://github.com/axboot/ax-boot-document/blob/master/",
             "label": "Edit This Page"
         },
-        "github": {
+        "-github": {
             "url": "https://github.com/axboot/ax-boot-framework"
         },
         "ga": {
