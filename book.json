@@ -2,7 +2,8 @@
     "plugins": [
         "edit-link",
         "github",
-        "github-buttons"
+        "github-buttons",
+        "ga"
     ],
     "pluginsConfig": {
         "edit-link": {
