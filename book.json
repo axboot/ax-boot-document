@@ -12,6 +12,10 @@
         },
         "github": {
             "url": "https://github.com/axboot/ax-boot-framework"
+        },
+        "ga": {
+            "token": "UA-56252826-4",
+            "configuration": "auto"
         }
     }
 }
