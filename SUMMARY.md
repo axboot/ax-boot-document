@@ -17,5 +17,7 @@
     - [기본템플릿](front-end/basic-template.md)
     - [그리드 페이징](front-end/grid-paging.md)
     - [모달 다루기](front-end/modal-control.md)
+    - [테마 변경하기](front-end/theme.md)
 * Back-end 개발 가이드
+    - [modelExtractor 를 이용한 JPA API 만들기](back-end/jpa-api.md)
 * [빌드](build.md)
