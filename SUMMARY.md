@@ -1,7 +1,7 @@
 # Summary
 
 * [AXBOOT소개](README.md)
-* [설치환경](environment.md)
+* [개발환경](environment.md)
 * [설치하기](install.md)
 * 구성
     - [UI Framework (AX5UI)](composition/ax5ui.md)
@@ -19,5 +19,5 @@
     - [모달 다루기](front-end/modal-control.md)
     - [테마 변경하기](front-end/theme.md)
 * Back-end 개발 가이드
-    - [modelExtractor 를 이용한 JPA API 만들기](back-end/jpa-api.md)
+    - [ModelExtractor 사용법](back-end/jpa-api.md)
 * [빌드](build.md)

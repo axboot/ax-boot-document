@@ -27,6 +27,7 @@
 ## 소스코드 생성하기
 1. AXBoot Start에 접속합니다. http://start.axboot.com 
 2. Maven Group ID, Artifact ID, 프로젝트 명과 프로젝트에 대한 간단한 설명, 마지막으로 소스코드 패키지 명을 입력한 후, 소스코드 생성 버튼을 클릭합니다.
+3. 다운로드된 압축 파일을 해제한 다음, 
 
 ## 소스코드 열기 (Eclipse / STS)
 1. File -> Import -> Maven -> Existing Maven Projects를 선택합니다.

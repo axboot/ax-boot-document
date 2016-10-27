@@ -1,4 +1,4 @@
-# 개발환경 및 개발언어
+# 개발환경
 
 ![env.jpg](assets/DD33823FBF7DACE5BA716AA0BC475698.jpg)
 
