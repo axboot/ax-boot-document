@@ -24,12 +24,9 @@
 - Git
     - https://git-scm.com에 방문하여 Git을 설치합니다.
 
-## 소스코드 내려받기
-1. AXBoot Github에 접속합니다. https://github.com/axboot/ax-boot-framework 
-2. Clone or Download 버튼을 클릭한 후 해당 주소를 복사합니다.
-![Screen Shot 2016-09-18 at 8.23.34 PM.png](assets/D2F2363A1E2F15A1EBAD1C576C001B26.png)
-3. Git 명령줄에서 다음과 같이 명령어를 입력하여 소스코드를 복사합니다.
-![Screen Shot 2016-09-18 at 8.24.41 PM.png](assets/A360CD6ACAB05200A104C669033208A3.png)
+## 소스코드 생성하기
+1. AXBoot Start에 접속합니다. http://start.axboot.com 
+2. Maven Group ID, Artifact ID, 프로젝트 명과 프로젝트에 대한 간단한 설명, 마지막으로 소스코드 패키지 명을 입력한 후, 소스코드 생성 버튼을 클릭합니다.
 
 ## 소스코드 열기 (Eclipse / STS)
 1. File -> Import -> Maven -> Existing Maven Projects를 선택합니다.
@@ -40,7 +37,10 @@
 ## 소스코드 열기 (IntelliJ)
 1. 시작화면에서 Open을 선택하고 Git을 통해 내려받은 AXBoot 소스코드를 선택합니다.
 
-## AXBoot 실행하기 (Eclipse / STS)
+## AXBoot 실행하기(Spring Boot 내장 톰캣 사용)
+1. mvn spring-boot:run 명령을 터미널에서 입력합니다.
+
+## AXBoot 실행하기(외부 톰캣 사용) - Eclipse / STS
 1. File -> New -> Other -> Server -> Server를 선택후 Next 버튼을 클릭합니다.
 2. Apache -> Tomcat (설치한버전)을 선택합니다.
 ![Screen Shot 2016-09-18 at 8.52.34 PM.png](assets/7F7DDEBD8CA199027EA572EFD1921509.png)
@@ -57,7 +57,7 @@
 ![Screen Shot 2016-09-18 at 8.57.55 PM.png](assets/5FA7768083A6E74B671C2DEA3909ED5F.png)
 
 
-## AXBoot 실행하기 (IntelliJ)
+## AXBoot 실행하기(외부 톰캣 사용) - IntelliJ
 1. Run -> Edit Configuration을 선택합니다.
 2. + 을 클릭 한 후 Tomcat Server -> Local을 선택합니다.
 ![Screen Shot 2016-09-18 at 9.06.40 PM.png](assets/254E34097753EECA21A34EC37BD4C4E3.png)
