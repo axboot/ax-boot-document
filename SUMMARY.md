@@ -11,7 +11,7 @@
     - [SlowQuery Detector](composition/slowquery-detector.md)
     - [다양한 형태의 데이터 영속화 기능 제공](composition/orm-function.md)
     - [AXBoot 내장 기본기능](composition/basic-function.md)
-    - [AXBoot 기반 프레임워크 및 컴포넌트 구성정보](composition/framework-component.md)
+    - [오픈소스 버전 정보](composition/framework-component.md)
 * Front-end 개발 가이드
     - [페이지구조 & 커스텀태그](front-end/page-basic.md)
     - [기본템플릿](front-end/basic-template.md)
