@@ -23,6 +23,10 @@ myGrid.setData({
  * gridView
  */
 fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
+    page: {
+        pageNumber: 0,
+        pageSize: 10
+    },
     initView: function () {
         var _this = this;
 
@@ -45,8 +49,8 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
                 }
             },
             onPageChange: function (pageNumber) {
-                // 사용자가 페이지를 클릭했을 때.
-                ACTIONS.dispatch(ACTIONS.PAGE_SEARCH, {page: {pageNumber: pageNumber}});
+                _this.setPageData({pageNumber: pageNumber});
+                ACTIONS.dispatch(ACTIONS.PAGE_SEARCH);
             }
         });
     }
@@ -58,15 +62,10 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
 var ACTIONS = axboot.actionExtend(fnObj, {
     PAGE_SEARCH: function (caller, act, data) {
 
-        // 넘겨받은 페이지번호를 searchView로 전달해줍니다.
-        if (data && data.page) {
-            caller.searchView.setPageNumber(data.page.pageNumber);
-        }
-
         axboot.ajax({
             type: "GET",
             url: ["samples", "parent"],
-            data: caller.searchView.getData(),
+            data: $.extend({}, caller.searchView.getData(), caller.gridView01.getPageData()),
             callback: function (res) {
                 caller.gridView01.setData(res);
             },
