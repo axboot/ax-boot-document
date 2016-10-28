@@ -33,7 +33,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
 ### 모달창
 
 #### getData
-`getData` 함수를 통해 부모창에서 `setData`를 통해 전달한 데이터를 받을 수 있습니다
+`getData` 함수를 통해 부모창에서 `setData`를 통해 전달한 데이터를 받을 수 있습니다.
 ```js
 fnObj.pageStart = function () {
     var _this = this;
@@ -44,7 +44,7 @@ fnObj.pageStart = function () {
 ```
 
 #### callback
-`parent.axboot.modal.callback` 함수를 통해 모달창에서 부모창으로 처리한 결과를 전달할 수 있습니다.`
+`parent.axboot.modal.callback` 함수를 통해 모달창에서 부모창으로 처리한 결과를 전달할 수 있습니다.
 ```js
 var ACTIONS = axboot.actionExtend(fnObj, {
     PAGE_CLOSE: function (caller, act, data) {
