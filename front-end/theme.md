@@ -1,7 +1,6 @@
-# AXBOOT 테마
+# AXBoot 테마
 
-https://github.com/axboot/ax-boot-themes 에 AXBOOT 테마가 공개 되어 있습니다.
-
+[https://github.com/axboot/ax-boot-themes](https://github.com/axboot/ax-boot-themes) 에 AXBoot 테마가 공개 되어 있습니다.
 
 ### 사용법
 
@@ -9,7 +8,7 @@ https://github.com/axboot/ax-boot-themes 에 AXBOOT 테마가 공개 되어 있�
 ```json
 {
   "title": "AXBoot :: Advanced Web Application Development Framework",
-  "copyrights": "AXBOOT 2.0.0 - Web Application Framework © 2010-2016",
+  "copyrights": "AXBoot 2.0.0 - Web Application Framework © 2010-2016",
   "logo": {
     "header": "[테마별주소]/images/header-logo.png",
     "login": "/assets/images/login-logo.png",

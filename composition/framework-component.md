@@ -1,7 +1,7 @@
-## AXBoot 기반 프레임워크 및 컴포넌트 구성정보
+## 오픈소스 버전 정보
 
 - Base Framework
-    - Spring Boot 1.4.0.RELEASE
+    - Spring Boot 1.4.1.RELEASE
         - Spring Data JPA 
         - Spring AOP
         - Spring Security

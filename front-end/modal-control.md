@@ -1,11 +1,8 @@
 # 모달 컨트롤
 
-웹 애플리케이션 모달창을 컨트롤 하여 데이터를 넘겨주고 또 모달에서 다시 부모창으로 값을 돌려받는 일은 상당히 번거롭고 개발 할 때 마다 만족스럽지 못한 일입니다.
-모달창에서 부모창의 즉 `opener` 또는 `parent`의 도큐먼트의 정해진 함수를 호출하여 값을 주고 받아야 하는데. 모달 때문에 애플리케이션의 함수를 지저분 하게 짜는 일은 정말 피하고 싶기 때문입니다.
+AX5UI의 모달 컨트롤은 `sendData`과 `callback` 두가지 함수만 작성하면 됩니다.     
 
-AXBOOT에서는 `axboot.modal` 함수를 이용하여 값을 주고 받는 함수를 함수의 아규먼트 형태로 만들었습니다.
-
-### samples / grid-modal
+### 모달창 호출
 ```js
 var ACTIONS = axboot.actionExtend(fnObj, {
     ETC3FIND: function (caller, act, data) {
@@ -13,7 +10,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
             modalType: "SAMPLE-MODAL",
             param: "",
             sendData: function(){
-                // 모달창에 전달할 오브젝트.
+                // 모달창에 전달할 객체
                 return {
                     "sendData": "AX5UI"
                 };
@@ -31,11 +28,12 @@ var ACTIONS = axboot.actionExtend(fnObj, {
     }
 });
 ```
+---
 
-### samples / modal
-모달창쪽에서는 다음과 같이 getData, callBack 할 수 있다.
+### 모달창
 
 #### getData
+`getData` 함수를 통해 부모창에서 `setData`를 통해 전달한 데이터를 받을 수 있습니다
 ```js
 fnObj.pageStart = function () {
     var _this = this;
@@ -46,6 +44,7 @@ fnObj.pageStart = function () {
 ```
 
 #### callback
+`parent.axboot.modal.callback` 함수를 통해 모달창에서 부모창으로 처리한 결과를 전달할 수 있습니다.`
 ```js
 var ACTIONS = axboot.actionExtend(fnObj, {
     PAGE_CLOSE: function (caller, act, data) {

@@ -5,4 +5,4 @@
 ![Screen Shot 2016-09-21 at 10.12.22 PM.png](../assets/08E0D744E426C0166CDA4684A9391576.png)
 - 해당 테이블의 이름을 선택하면 다음과 같이 코드가 자동생성되어 표시되고, 바탕화면 output 디렉토리에 Java, XML 파일이 생성됩니다.
 ![Screen Shot 2016-09-21 at 10.13.30 PM.png](../assets/78E8FBD04ECC5644F0D9C9C2DBFE0DF2.png)
-- 생성된 파일들을 Controller, Domain 패키지에 위치시키기만 하면 CRUD와 페이징, 검색 등의 기본적인 로직이 제공된 코드를 기반으로 구현을 시작할 수 있습니다.
+- 생성된 파일들을 Controller, Domain 패키지에 복사하기만 하면 CRUD와 페이징, 검색 등의 기능이 포함된 코드를 기반으로 구현을 시작할 수 있습니다.

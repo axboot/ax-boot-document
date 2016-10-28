@@ -1,9 +1,11 @@
 # 기본템플릿
 
-> 기본 템플릿은 demo.axboot.com 접속 후 `레이아웃 샘플 > 기본템플릿` 메뉴를 선택하시면 확인 할 수 있습니다. 기본 템플릿은 검색바와 인라인 에디트를 지원하는 그리드를 기본 구성으로 하는 샘플 페이지 입니다.
+> 기본 템플릿은 [demo.axboot.com](http://demo.axboot.com) 접속 후 `레이아웃 샘플 > 기본템플릿` 메뉴를 선택하면 확인 할 수 있습니다. 기본 템플릿은 검색 바와 인라인 편집 기능이 포함된 그리드를 기본 구성으로 하는 샘플 페이지입니다.
 > API 로는 `/api/v1/samples/parent` [GET][PUT] 을 사용합니다.
 
 ![기본템플릿 미리보기](../assets/basic-template.png)
+
+---
 
 ## VIEW
 ```html
@@ -15,97 +17,89 @@
 <ax:set key="page_desc" value="${PAGE_REMARK}"/>
 <ax:set key="page_auto_height" value="true"/>
 ```
-페이지의 선언 구문 입니다. 레이아웃 (`WEB-INF/tags/layout/base.tag`) 파일에 전달된 변수를 `ax:set`으로 정의 합니다.
-각각의 프로그램 페이지는 시스템에서 설정한 메뉴이름을 session변수로 가지고 있습니다. 세션변수로 전달된 값들은 `${pageName}`으로 jstl 에서 사용 할 수 있습니다.
+페이지의 선언 구문 입니다. 레이아웃 (`WEB-INF/tags/layout/base.tag`) 에 전달할 변수를 `ax:set`으로 정의 합니다.
+시스템관리 -> 메뉴관리에서 지정한 메뉴명은 Request 속성 변수에 담겨있습니다. 해당 값들은 `${pageName}` 형태로 페이지에서 사용할 수 있습니다.
 
 ```html
 <ax:layout name="base">
     <jsp:attribute name="script">
         <script type="text/javascript" src="<c:url value='js/basic.js' />"></script>
     </jsp:attribute>
-```
-페이지에서 사용 할 JS파일을 지정 합니다. `jsp:attribute`는 script뿐 아니라 레이아웃에서 정의한 키 값이면 모두 사용 할 수 있습니다.
-단. AXBOOT에서는 `jsp:body`가 항상 가장 마지막 요소 이어야 하므로 `jsp:attribute`를 먼저 선언 후 `jsp:body`를 마지막에 두어야 합니다.  
-
-`basic.js` 와 같은 프로그램 JS 파일은 레이아웃에 선언된 `axboot.js`에 의해 `fnObj.pageStart`함수가 실행됩니다. 또한 내부에 ACTION & VIEW 패턴으로 코딩 되어 있습니다.
-ACTION & VIEW 패턴에 대해서는 이 장의 아래에서 다루겠습니다.
-
-```html
-    <jsp:body>
-        <ax:page-buttons></ax:page-buttons>
-```
-프로그램과 메뉴가 가진 권한에 따라 페이지의 버튼을 출력 시켜주는 커스텀 태그 입니다. `WEB-INF/tags/page-buttons.tag` 에서 확인 할 수 있습니다.
-원하는 경우 권한을 확장, 또는 커스트 마이징을 할 수 있습니다.
-
-```html
-        <div role="page-header">
-            <ax:form name="searchView0">
-                <ax:tbl clazz="ax-search-tbl" minWidth="500px">
-                    <ax:tr>
-                        <ax:td label='검색조건' width="300px">
-                            <input type="text" class="form-control" />
-                        </ax:td>
-                        <ax:td label='검색조건 1' width="300px">
-                            <input type="text" class="form-control" />
-                        </ax:td>
-                        <ax:td label='검색조건 2' width="300px">
-                            <input type="text" class="form-control" />
-                        </ax:td>
-                    </ax:tr>
-                </ax:tbl>
-            </ax:form>
-            <div class="H10"></div>
-        </div>
-```
-프로그램 페이지는 `role="page-header"`, `role="page-content"` 로 나누어 집니다.
-페이지가 시작할 때, 리사이즈 될 때 마다 브라우저의 높이에 맞게 화면을 출력하기 위해 `page-header`를 뺀 나머지 영역을 계산하여 `page-content`의 높이로 자동 계산합니다.
-
-![AXBOOT-페이지롤](../assets/page-layout-role.png)
-
-높이 자동 계산에 대한 스크립트는 `axboot.js`에서 처리 하고 있습니다.
-
-```html
-        <ax:split-layout name="ax1" oriental="horizontal">
-            <ax:split-panel width="*" style="">
-
-                <!-- 목록 -->
-                <div class="ax-button-group" data-fit-height-aside="grid-view-01">
-                    <div class="left">
-                        <h2><i class="cqc-list"></i>
-                            프로그램 목록 </h2>
-                    </div>
-                    <div class="right">
-                        <button type="button" class="btn btn-default" data-grid-view-01-btn="add"><i class="cqc-circle-with-plus"></i> 추가</button>
-                        <button type="button" class="btn btn-default" data-grid-view-01-btn="delete"><i class="cqc-circle-with-plus"></i> 삭제</button>
-                    </div>
-                </div>
-                <div data-ax5grid="grid-view-01" data-fit-height-content="grid-view-01" style="height: 300px;"></div>
-
-            </ax:split-panel>
-        </ax:split-layout>
-```
-ax:split-layout 는 `WEB-INF/tags` 에서 커스텀 태그 처리 구문을 확인 할 수 있습니다. 
-커스텀 태그 안에서 `role="page-content"` 속성을 만들어 주고 있어,
-split-layout만 코딩했지만 페이지 높이가 최적화된 화면을 볼 수 있습니다.
-
-레이아웃은 vertical, horizontal 이 있으면 중첩하여 사용 할 수 있습니다. (단, name 값을 한 화면에서 고유 하게 입력 되어야 합니다.)
-
-**split-panel**
-
-split-panel안에있는 태그의 속성이 data-fit-height-aside, data-fit-height-content를 가진다면 패널의 높이 안에서 aside엘리먼트들의 높이를 제외한 나머지 공간을 content가 가지게 됩니다.
-```html
-    </jsp:body>
 </ax:layout>
 ```
+페이지에서 사용 할 자바스크립트 파일을 지정 합니다. `jsp:attribute`는 `script`외에도 레이아웃에 정의된 키 값이면 확장하여 사용할 수 있습니다.
+단. AXBoot에서는 여러개의 `jsp:attribute`가 있을 경우 반드시 `jsp:body` 윗 부분에 위치하도록 하여 `jsp:body`가 코드 가장 마지막에 나오도록 해야합니다.
 
+`basic.js` 와 같은 프로그램 자바스크립트 파일은 레이아웃 페이지에 선언된 `axboot.js`에 의해 `fnObj.pageStart`함수가 실행됩니다.
+
+---
+
+```html
+<jsp:body>
+    <ax:page-buttons></ax:page-buttons>
+</jsp:body>
+```
+---
+프로그램과 메뉴가 가진 권한에 따라 페이지의 버튼을 출력하는 사용자 정의 태그입니다. `WEB-INF/tags/page-buttons.tag` 에서 확인할 수 있습니다.
+```html
+<div role="page-header">
+    <ax:form name="searchView0">
+        <ax:tbl clazz="ax-search-tbl" minWidth="500px">
+            <ax:tr>
+                <ax:td label='검색조건' width="300px">
+                    <input type="text" class="form-control" />
+                </ax:td>
+                <ax:td label='검색조건 1' width="300px">
+                    <input type="text" class="form-control" />
+                </ax:td>
+                <ax:td label='검색조건 2' width="300px">
+                    <input type="text" class="form-control" />
+                </ax:td>
+            </ax:tr>
+        </ax:tbl>
+    </ax:form>
+    <div class="H10"></div>
+</div>
+```
+프로그램 페이지는 `role="page-header"`, `role="page-content"` 로 나누어 집니다.
+페이지가 시작되거나, 페이지 크기가 변경될 때마다 브라우저 높이에 맞게 화면을 출력하기 위해 `page-header`를 뺀 나머지 영역을 계산하여 `page-content`의 높이로 사용합니다.
+
+![AXBoot-페이지롤](../assets/page-layout-role.png)
+
+높이 자동 계산 코드는 `axboot.js`에서 확인할 수 있습니다
+
+---
+
+```html
+<ax:split-layout name="ax1" oriental="horizontal">
+    <ax:split-panel width="*" style="">
+
+        <!-- 목록 -->
+        <div class="ax-button-group" data-fit-height-aside="grid-view-01">
+            <div class="left">
+                <h2><i class="cqc-list"></i>프로그램 목록 </h2>
+            </div>
+            <div class="right">
+                <button type="button" class="btn btn-default" data-grid-view-01-btn="add"><i class="cqc-circle-with-plus"></i> 추가</button>
+                <button type="button" class="btn btn-default" data-grid-view-01-btn="delete"><i class="cqc-circle-with-plus"></i> 삭제</button>
+            </div>
+        </div>
+        <div data-ax5grid="grid-view-01" data-fit-height-content="grid-view-01" style="height: 300px;"></div>
+
+    </ax:split-panel>
+</ax:split-layout>
+```
+`ax:split-layout`는 화면을 종/횡으로 나눌 수 있는 레이아웃입니다 JSTL 태그 내부에서 `role="page-content"` 속성을 만들기 때문에 페이지 높이가 자동으로 최적화 됩니다.
+`name`이 고유하기만 하면 여러번 중복하여 사용할 수 있습니다. `orientation`은 `vertical`과 `horizontal`로 사용하면 됩니다.
+
+---
 
 ## JS
 
 ```js
 var fnObj = {};
 ```
-프로그램 페이지에서 사용하는 변수 입니다. AXBOOT에서는 가급적 글로벌 변수 선언을 제한하는 것을 권장하고 있습니다.
-하나의 프로그램 페이지에는 `ACTIONS`, `fnObj`, `ax5`, `axboot` 등 몇가지를 몇가지 변수만 사용하고 있습니다.
+페이지에서 사용하는 기본 변수 객체 입니다.
 
 ```js
 var ACTIONS = axboot.actionExtend(fnObj, {
@@ -128,21 +122,16 @@ var ACTIONS = axboot.actionExtend(fnObj, {
             // 직접코딩
             return false;
         }
-    } 
+    }
 });
 ```
-ACTIONS 오브젝트는 `axboot > src > view-action.js` 에서 actionExtend 함수를 이용하여 구현됩니다.
-ACTIONS 내부의 키들(액션명)을 내장된 dispatch 함수가 사용자가 선언한 dispatch 함수를 실행해줍니다.
-사용자의 dispatch 안에서 `ACTIONS.exec`실행하면 액션명으로 정의된 함수를 실행 해줍니다.
+ACTIONS 객체는 `axboot > src > view-action.js`의 actionExtend 함수를 확장합니다.
+ACTIONS 뷰 사이의 통신 방식을 메서드로 정의한 객체입니다. 예제에서 `PAGE_SEARCH`는 AJAX 요청으로 JSON을 가져와서 GridView에 넘겨주는 예제입니다.   
+이는 메시지를 기반으로 통신하므로 뷰와 뷰 사이의 의존성을 제거하며 뷰의 재활용성을 높여줍니다.  
 
-ACBOOT의 JS파일은 VIEW들과 ACTIONS 간에 통신을 하여 비즈니스 로직을 처리합니다. 
-각 VIEW들은 내부에서 처리할 로직을 처리하고 외부와의 통신(AJAX, 다른뷰로 요청, 응답등)은 ACTIONS에서 처리합니다.
+> AJAX URL을 재활용 하기위해 axboot.ajax는 URL 별칭기능을 제공합니다. axboot.config.js의 `axboot.def["API"]`에 별칭을 선언하면 됩니다. url["sample","parent"] 에서 "sample"은 별칭에서, "parent"는 별칭에서 가져온 주소 뒤쪽에 추가로 연결됩니다. "sample"의 주소가 `/api/v1/sample` 이라면 생성되는 최종 URL은 `/api/v1/samples/parent`가 됩니다.  
 
-이런 방식으로 코딩 하면, 뷰와 뷰 사이에 의존성을 제거 하게 되므로 좀 더 유연한 코딩이 가능합니다. 또한 개발자간에 인수 인계 작업도 수월해져 유지보수가 용이합니다.
-
-> axboot.ajax 에서 url 값을 ["samples", "parent"]으로 선언 했습니다 이 부분은 axboot.config.js 에 선언된 `axboot.def["API"]` 에서 정의된 오브젝트로 변환합니다. 
-url에 Array 타입을 선언했다면 Array의 첫번째 인자를 이용하여 `axboot.def["API"]`에서 상세 url을 가져오고 그 뒤로 `/+url[1]` 해서 
-`/api/v1/samples/parent` 라는 주소값을 이용하여 ajax 호출을 하게 됩니다
+---
 
 ```js
 // fnObj 기본 함수 스타트와 리사이즈
@@ -159,9 +148,12 @@ fnObj.pageResize = function () {
 };
 ```
 
-각각의 프로그램 페이지는 `head` 태그에 `axboot.js` 를 임포트 하고 있습니다.
-`axboot.js`에서는 `$(document.body).ready`를 사용하여 `axboot.init` > `axboot.pageStart` > `fnObj.pageStart` 가 순차적으로 실행됩니다.
-`fnObj.pageStart`에서는 페이지가 시작할 때 실행 해야하는 액션을 dispatch 하고, 페이지에서 사용중인 뷰들의 `initView` 함수를 실행 하여 각각의 뷰들을 초기화 합니다.
+각 페이지는 `head` 태그에 `axboot.js`를 임포트 하고 있습니다.
+`axboot.js`에서는 `$(document.body).ready`를 사용하여 `axboot.init` > `axboot.pageStart` > `fnObj.pageStart` 순으로 호출합니다.
+
+`fnObj.pageStart`에서는 페이지가 처음 시작된 후 실행 해야하는 `ACTIONS`를 선언하고, 페이지에 정의된 뷰를 `initView` 함수를 통해 초기화 합니다.
+
+---
 
 ```js
 fnObj.pageButtonView = axboot.viewExtend({
@@ -180,16 +172,17 @@ fnObj.pageButtonView = axboot.viewExtend({
     }
 });
 ```
-앞에서도 설명을 드렸지만 뷰 오브젝트는 개별 뷰에서 일어나는 일들만 기술 하는 것을 원칙으로 합니다.
-개별 뷰 외에서 개별뷰의 데이터를 요구하거나 데이터를 변경 해야 할 때는 `getData`, `setData` 함수를 사용합니다.
+뷰는 개별 뷰에서 일어나는 일들만 기술하는 것을 원칙으로 하며, 해당 뷰에 데이터를 전달하거나 외부 뷰에서 해당 뷰의 데이터를 요청하거나 변경 할 때는 `getData`, `setData` 함수를 사용합니다.
 
-그리드 뷰는 `axboot.gridView` 상속하여 선언합니다. `axboot.gridView`는 `assets/js/axboot/src/view-action.js` 파일에서 확인 할 수있습니다.
-몇몇 메소드는 미리 정의된 함수가 있으므로 기본 기능만 사용하는 경우 정의할 필요가 없습니다.
+---
 
-gridView.initView안에서 `axboot.gridBuilder` 를 실행하여 `ax5ui-grid`를 초기화 하여 target에 연결해줍니다.
+그리드뷰는 `axboot.gridView` 상속하여 선언합니다. `axboot.gridView`는 `assets/js/axboot/src/view-action.js` 파일에서 확인할 수 있습니다.
+몇몇 메서드는 미리 정의된 함수가 있으므로 기본 기능만 사용하는 경우 정의할 필요가 없습니다.
+
+gridView.initView에서 `axboot.gridBuilder` 를 실행하여 `ax5ui-grid`를 초기화한 후 target에 연결합니다.
 
 > axboot.buttonClick 을 이용하면 버튼을 클릭했을 때 이벤트를 편리하게 다룰 수 있습니다. 
-`button data-page-btn="search"` 라는 버튼을 클릭 했을 때 `search` 함수를 호출해주어 개발자는 버튼의 속성만으로 쉽게 이벤트를 바인딩 할 수 있습니다.
+axboot.buttonClick 함수는 `button data-grid-view-01-btn="add"`버튼을 클릭 했을 때 `add` 함수를 호출 할 수 있도록 하는 예제입니다.
 
 ```js
 /**
@@ -222,9 +215,6 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
         axboot.buttonClick(this, "data-grid-view-01-btn", {
             "add": function () {
                 ACTIONS.dispatch(ACTIONS.ITEM_ADD);
-            },
-            "delete": function () {
-                ACTIONS.dispatch(ACTIONS.ITEM_DEL);
             }
         });
     }
@@ -232,9 +222,7 @@ fnObj.gridView01 = axboot.viewExtend(axboot.gridView, {
 ```
 
 ### axboot.gridBuilder
-ax5ui-grid를 제대로 사용하기 위해선 상당한 양의 설정옵션을 다루어야 합니다. 이런 설정들은 대부분은 프로젝트 마다 동일한 패턴으로 반복됩니다.
-또한 페이지적용한 스크립트 옵션과 다르게 콤포넌트가 업데이트 되어 많은 양의 코드를 변경해야 할 수도 있습니다.
-이런 어려움을 해결하기 위해 `gridBuilder`함수를 만들었습니다.
+ax5ui-grid는 상당한 양의 설정옵션이 있습니다. 하지만 프로젝트 성격에 따라서는 동일한 설정코드가 반복적으로 나타날 수 있습니다. 그리드의 반복적인 설정 코드를 한데모아 적용해주는 `gridBuilder`를 사용하면 이런 문제를 해결할 수 있습니다.  
 
 ```js
 var defaultGridConfig = {
@@ -263,5 +251,4 @@ var defaultGridConfig = {
     }
 };
 ```
-`gridBuilder` 함수는 `js/axboot/src/gridBuilder.js` 파일에서 확인 할 수 있습니다. 위 소스의 내용은 `gridBuilder`에 선언된 그리드 기본 설정 옵션들 입니다.
- 기본 설정 옵션들은 `gridBuilder` 선언시 재정의한 옵션으로 업데이트 되어 최종 그리드가 만들어 집니다.
+`gridBuilder` 함수는 `js/axboot/src/gridBuilder.js` 에 선언되어 있습니다. 위는  `gridBuilder`에 선언된 그리드 기본 설정 옵션으로, 추가적인 설정을 선언하면 설정이 오버라이딩 되어 최종 그리드가 생성됩니다.
