@@ -1,6 +1,6 @@
 # AXBoot 테마
 
-[https://github.com/axboot/ax-boot-themes](https://github.com/axboot/ax-boot-themes) 에 AXBoot 테마가 공개 되어 있습니다.
+[https://github.com/axboot/ax-boot-themes](https://github.com/axboot/ax-boot-themes) 에서 제공되는 테마를 확인할 수 있습니다.
 
 ### 사용법
 
