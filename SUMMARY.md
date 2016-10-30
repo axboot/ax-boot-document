@@ -13,6 +13,7 @@
     - [AXBoot 내장 기본기능](composition/basic-function.md)
     - [오픈소스 버전 정보](composition/framework-component.md)
 * Front-end 개발 가이드
+    - [axboot.js](front-end/axboot.js.md)
     - [페이지구조 & 사용자정의 태그](front-end/page-basic.md)
     - [기본템플릿](front-end/basic-template.md)
     - [그리드 페이징](front-end/grid-paging.md)
