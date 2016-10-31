@@ -23,12 +23,29 @@
 
 - Git
     - https://git-scm.com에 방문하여 Git을 설치합니다.
+    
+- Bower
+    - bower.io 에 방문하면 bower 설치 방법에 대해 자세히 설명하고 있습니다.
+    - `$ npm install -g bower` 하여 bower CLI를 설치합니다.
+    
 
 ## 소스코드 생성하기
-1. AXBoot Start에 접속합니다. http://start.axboot.com 
+1. AXBoot Start에 접속합니다. http://start.axboot.com   
+
+![axboot, 소스코드 생성하기 1](assets/start-axboot-01.png)
+
 2. Maven Group ID, Artifact ID, 프로젝트 명과 프로젝트에 대한 간단한 설명, 마지막으로 소스코드 패키지 명을 입력한 후, 소스코드 생성 버튼을 클릭합니다.
-3. 다운로드된 압축 파일을 해제한 다음, /src/main/webapp/assets에서 `bower install`을 실행합니다
-    - bower 설치 방법 : https://bower.io/
+3. 다운로드된 압축 파일을 해제한 다음, 압축 해제된 폴더에서 터미널 창을 엽니다.
+    - `$ cd "압축 해제된 폴더명`
+    - `$ npm install` npm install 명령을 입력하면 프론트앤드용 각종 플러그인들을 준비합니다. 준비가 완료되면 성공 메세지를 보게 됩니다.
+
+![axboot, 소스코드 생성하기 2](assets/start-axboot-02.png)
+![axboot, 소스코드 생성하기 3](assets/start-axboot-03.png)
+
+4. 마지막으로 터미널에 `$mvn spring-boot:run` 을 입력하면 `localhost:8080`으로 서비스가 시작됩니다.
+
+![axboot, 소스코드 생성하기 4](assets/start-axboot-04.png)
+
 
 ## 소스코드 열기 (Eclipse / STS)
 1. File -> Import -> Maven -> Existing Maven Projects를 선택합니다.
