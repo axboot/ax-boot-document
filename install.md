@@ -24,8 +24,11 @@
 - Git
     - https://git-scm.com에 방문하여 Git을 설치합니다.
     
+- Node
+    - https://nodejs.org 방문하여 nodejs를 설치합니다.
+    
 - Bower
-    - bower.io 에 방문하면 bower 설치 방법에 대해 자세히 설명하고 있습니다.
+    - www.bower.io 에 방문하면 bower 설치 방법에 대해 자세히 설명하고 있습니다.
     - `$ npm install -g bower` 하여 bower CLI를 설치합니다.
     
 
