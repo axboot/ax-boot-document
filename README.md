@@ -46,7 +46,6 @@ Demo : http://demo.axboot.com
 - 그림4) JVM 기반 언어 점유율
 ![TnT-2016-podium-jvm-languages-v1.jpg](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/4986752B3DAE5A4DC47A3F812CC0FC99.jpg)
 출처 : https://zeroturnaround.com/
-</그림4>
 
 ---
 

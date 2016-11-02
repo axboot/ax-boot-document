@@ -21,7 +21,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
                     key: data.key,
                     value: data.value
                 });
-                // 모달창을 닫으려면 여기서 this는 modal UI 인스턴스가 됩니다.
+                // 모달창을 닫으려면 여기서 this는 modal UI 객체가 됩니다.
                 this.close();
             }
         });
@@ -33,7 +33,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
 ### 모달창
 
 #### getData
-`getData` 함수를 통해 부모창에서 `setData`를 통해 전달한 데이터를 받을 수 있습니다.
+`getData` 함수를 통해 부모창에서 `sendData`를 통해 전달한 데이터를 받을 수 있습니다.
 ```js
 fnObj.pageStart = function () {
     var _this = this;
@@ -56,7 +56,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
         var list = caller.gridView01.getData("selected");
         if (list.length > 0) {
             if (parent && parent.axboot && parent.axboot.modal) {
-                parent.axboot.modal.callback(list[0]); // 부모창에 callback 
+                parent.axboot.modal.callback(list[0]); // 부모창에 callback 호출
             }
         } else {
             alert("선택된 목록이 없습니다.");
