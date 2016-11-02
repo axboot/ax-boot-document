@@ -39,7 +39,7 @@
 
 2. Maven Group ID, Artifact ID, 프로젝트 명과 프로젝트에 대한 간단한 설명, 마지막으로 소스코드 패키지 명을 입력한 후, 소스코드 생성 버튼을 클릭합니다.
 3. 다운로드된 압축 파일을 해제한 다음, 압축 해제된 폴더에서 터미널 창을 엽니다.
-    - `$ cd "압축 해제된 폴더명`
+    - `$ cd "압축 해제된 폴더명"`
     - `$ npm install` npm install 명령을 입력하면 프론트앤드용 각종 플러그인들을 준비합니다. 준비가 완료되면 성공 메세지를 보게 됩니다.
 
 ![axboot, 소스코드 생성하기 2](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/start-axboot-02.png)

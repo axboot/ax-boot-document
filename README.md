@@ -11,53 +11,65 @@ AXBoot Initialzr를 통해 베이스 코드를 내려받고, IDE에서 소스코
 
 또한 로그인, 로그아웃, 세션관리, 사용자관리, 권한관리 등 웹 애플리케이션 개발에 항상 반복적인 부분을 확장가능한 형태로 미리 제공하며 역공항 모델 추출기능과 로깅, 슬로우 쿼리 감지 등 웹 애플리케이션 개발, 운영에 필요한 다양한 기능들을 함께 제공합니다.  
 
-Github : http://github.com/axboot , http://github.com/ax5ui
+> - Github : http://github.com/axboot , http://github.com/ax5ui
+> - Initialzr : http://start.axboot.com
+> - Demo : http://demo.axboot.com
 
-Initialzr : http://start.axboot.com
 
-Demo : http://demo.axboot.com
-
-# AXBoot 소개
 
 ## AXBoot 탄생 배경
-- 앞서 이야기한것처럼, 웹 애플리케이션 개발에는 다양한 기술이 사용됩니다. 최근에는 더 급격한 속도로 웹 기술이 발전되고 있으며, 아름답고 편리한 UI/UX를 위한 프런트엔드 기술과, 대용량 데이터, 분산처리를 효율적으로 하기위한 백엔드 기술들이 더욱 중요시되고 있고, 각 기술들은 점점 세분화되어 전문성을 요구하고 있습니다. 
+앞서 이야기한것처럼, 웹 애플리케이션 개발에는 다양한 기술이 사용됩니다. 최근에는 더 급격한 속도로 웹 기술이 발전되고 있으며, 
+아름답고 편리한 UI/UX를 위한 프런트엔드 기술과, 대용량 데이터, 분산처리를 효율적으로 하기위한 백엔드 기술들이 더욱 중요시되고 있고, 
+각 기술들은 점점 세분화되어 전문성을 요구하고 있습니다. 
 
 ---
 
 - 그림1) 프런트엔드 스펙트럼
+
 ![spectrum.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/3294546972B83DFE881C853B483E6654.png)
 출처 : https://www.frontendhandbook.com
 
 ---
 
 - 그림2) 프런트엔드 기술 트렌드
+
 ![front-end-skills.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/AFD4014AAED1F0B167C8430973368CFF.png)
 출처 : https://www.frontendhandbook.com
 
 ---
 
 - 그림3) 백엔드 영역 프레임워크 점유율
+
 ![report-screen-min.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/48E65A5F9D62235452EDF4FECA47C296.png)
 출처 : https://zeroturnaround.com/
 
 
 ---
 
-- 그림4) JVM 기반 언어 점유율
-![TnT-2016-podium-jvm-languages-v1.jpg](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/4986752B3DAE5A4DC47A3F812CC0FC99.jpg)
+- 그림4) JVM 기반 언어 점유율  
+
+![TnT-2016-podium-jvm-languages-v1.jpg](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/4986752B3DAE5A4DC47A3F812CC0FC99.png)
 출처 : https://zeroturnaround.com/
 
 ---
 
 - 그림5) 백엔드 기술 도구
+
 ![Screen Shot 2016-09-18 at 3.50.40 PM.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/2C9D46174B758B88F24C9A4FBC83D010.png)
 출처 : https://zeroturnaround.com/
 
-이처럼 현대의 웹 애플리케이션은 수가지~수십가지의 기술들과 도구를 조합하여 개발하게 되며, 개발이 완료된 애플리케이션을 배포하여 운영 할 때에는 더 많은 기술과 도구가 필요합니다. 
+이처럼 현대의 웹 애플리케이션은 수가지~수십가지의 기술들과 도구를 조합하여 개발하게 되며, 
+개발이 완료된 애플리케이션을 배포하여 운영 할 때에는 더 많은 기술과 도구가 필요합니다. 
 
-더 많은 개발자들이 뛰어난 UI와 안정성을 가진 웹 애플리케이션 개발을 할 수 있도록 지원하고, 대한민국 웹 애플리케이션 생태계를 바꾸어보고자 AXBoot팀은 다년간의 웹 애플리케이션 노하우와 수십가지의 오픈소스, 자체개발한 Web UI Framework를 하나로 묶어 풀 스택 웹 애플리케이션 프레임워크를 개발했습니다. AXBoot를 사용하면 Java, Spring, HTML5 기반의 웹 애플리케이션을 쉽고 빠르게 개발할 수 있으며, 확장성과 유지보수성, 안정성이 뛰어난 웹 애플리케이션을 운영할 수 있습니다.
+더 많은 개발자들이 뛰어난 UI와 안정성을 가진 웹 애플리케이션 개발을 할 수 있도록 지원하고, 
+대한민국 웹 애플리케이션 생태계를 바꾸어보고자 AXBoot팀은 다년간의 웹 애플리케이션 노하우와 수십가지의 오픈소스, 
+자체개발한 Web UI Framework를 하나로 묶어 풀 스택 웹 애플리케이션 프레임워크를 개발했습니다.
+ 
+**AXBoot를 사용하면 Java, Spring, HTML5 기반의 웹 애플리케이션을 쉽고 빠르게 개발할 수 있으며, 
+확장성과 유지보수성, 안정성이 뛰어난 웹 애플리케이션을 운영할 수 있습니다.**
 
 ---
+
 # AXBoot 특징 및 장점
 
 - AXBoot는 자체개발한 UI Framework와 Spring Framework, 수십개의 오픈소스 컴포넌트들로 이루어진 풀 스택 웹 애플리케이션 개발 프레임워크 입니다. 또한 사용자관리, 시스템 메뉴, 권한 관리, 세션관리 등 이미 구현된 어드민 팩을 기반으로 즉시 사용가능한 관리 시스템(어드민)을 개발할 수 있습니다. 또한 HTML5, CSS3, JavaScript, Java8, Spring Framework, Maven 등의 표준화된 기술과 널리 사용되는 오픈소스를 기반으로 개발하였기 때문에 기존 웹 애플리케이션 개발자들에게 친숙하고 편리한 프레임워크로 느껴집니다.
