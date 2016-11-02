@@ -13,4 +13,4 @@
     - HTTP 요청 파라미터 정보
     - 사용자 정보
 - 또한 에러로그조회 페이지에서 에러를 조회 및 검색 할 수 있습니다.
-![Screen Shot 2016-09-21 at 10.08.14 PM.png](../assets/5A48D4669F58F44AB1A0ACC82A3B52E4.png)
+![Screen Shot 2016-09-21 at 10.08.14 PM.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/5A48D4669F58F44AB1A0ACC82A3B52E4.png)

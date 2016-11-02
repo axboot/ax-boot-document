@@ -3,7 +3,7 @@
 > 기본 템플릿은 [demo.axboot.com](http://demo.axboot.com) 접속 후 `레이아웃 샘플 > 기본템플릿` 메뉴를 선택하면 확인 할 수 있습니다. 기본 템플릿은 검색 바와 인라인 편집 기능이 포함된 그리드를 기본 구성으로 하는 샘플 페이지입니다.
 > API 로는 `/api/v1/samples/parent` [GET][PUT] 을 사용합니다.
 
-![기본템플릿 미리보기](../assets/basic-template.png)
+![기본템플릿 미리보기](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/basic-template.png)
 
 ---
 
@@ -64,7 +64,7 @@
 프로그램 페이지는 `role="page-header"`, `role="page-content"` 로 나누어 집니다.
 페이지가 시작되거나, 페이지 크기가 변경될 때마다 브라우저 높이에 맞게 화면을 출력하기 위해 `page-header`를 뺀 나머지 영역을 계산하여 `page-content`의 높이로 사용합니다.
 
-![AXBoot-페이지롤](../assets/page-layout-role.png)
+![AXBoot-페이지롤](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/page-layout-role.png)
 
 높이 자동 계산 코드는 `axboot.js`에서 확인할 수 있습니다
 

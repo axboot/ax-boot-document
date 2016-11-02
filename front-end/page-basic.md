@@ -75,7 +75,7 @@ AXBoot JSP페이지는 JSTL을 이용한 사용자정의 태그를 지원합니�
 ```
 **ax:tbl 출력결과 예**
 
-![ax:table출력결과](../assets/ax-table.png)
+![ax:table출력결과](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/ax-table.png)
 
 > `ax:tbl`은 반응형 테이블로 생성됩니다. `ax:td`는 한 컬럼에 `라벨과` `데이터`를 한번에 표현합니다. 위 예제에서 처럼 <ax:td label="이름"><input...></ax:td> 태그는 한 컬럼에 `이름` 라벨과 함께 `input` 컨트롤이 추가됩니다. 한 컬럼의 너비는 `width` 속성으로 정의 하고, 컬럼 내의 라벨 너비는 `labelWidth`로 정의합니다.
 
@@ -105,7 +105,7 @@ AXBoot JSP페이지는 JSTL을 이용한 사용자정의 태그를 지원합니�
     </ax:split-panel>
 </ax:split-layout>
 ```
-![ax-layout](../assets/ax-layout.png)
+![ax-layout](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/ax-layout.png)
 
 ---
 
@@ -125,4 +125,4 @@ AXBoot JSP페이지는 JSTL을 이용한 사용자정의 태그를 지원합니�
     </ax:tab-panel>
 </ax:tab-layout>
 ```
-![ax-tabl-layout](../assets/ax-tab-layout.png)
+![ax-tabl-layout](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/ax-tab-layout.png)

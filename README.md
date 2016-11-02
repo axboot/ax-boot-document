@@ -25,33 +25,33 @@ Demo : http://demo.axboot.com
 ---
 
 - 그림1) 프런트엔드 스펙트럼
-![spectrum.png](assets/3294546972B83DFE881C853B483E6654.png)
+![spectrum.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/3294546972B83DFE881C853B483E6654.png)
 출처 : https://www.frontendhandbook.com
 
 ---
 
 - 그림2) 프런트엔드 기술 트렌드
-![front-end-skills.png](assets/AFD4014AAED1F0B167C8430973368CFF.png)
+![front-end-skills.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/AFD4014AAED1F0B167C8430973368CFF.png)
 출처 : https://www.frontendhandbook.com
 
 ---
 
 - 그림3) 백엔드 영역 프레임워크 점유율
-![report-screen-min.png](assets/48E65A5F9D62235452EDF4FECA47C296.png)
+![report-screen-min.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/48E65A5F9D62235452EDF4FECA47C296.png)
 출처 : https://zeroturnaround.com/
 
 
 ---
 
 - 그림4) JVM 기반 언어 점유율
-![TnT-2016-podium-jvm-languages-v1.jpg](assets/4986752B3DAE5A4DC47A3F812CC0FC99.jpg)
+![TnT-2016-podium-jvm-languages-v1.jpg](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/4986752B3DAE5A4DC47A3F812CC0FC99.jpg)
 출처 : https://zeroturnaround.com/
 </그림4>
 
 ---
 
 - 그림5) 백엔드 기술 도구
-![Screen Shot 2016-09-18 at 3.50.40 PM.png](assets/2C9D46174B758B88F24C9A4FBC83D010.png)
+![Screen Shot 2016-09-18 at 3.50.40 PM.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/2C9D46174B758B88F24C9A4FBC83D010.png)
 출처 : https://zeroturnaround.com/
 
 이처럼 현대의 웹 애플리케이션은 수가지~수십가지의 기술들과 도구를 조합하여 개발하게 되며, 개발이 완료된 애플리케이션을 배포하여 운영 할 때에는 더 많은 기술과 도구가 필요합니다. 

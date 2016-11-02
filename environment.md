@@ -1,6 +1,6 @@
 # 개발환경
 
-![env.jpg](assets/DD33823FBF7DACE5BA716AA0BC475698.jpg)
+![env.jpg](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/DD33823FBF7DACE5BA716AA0BC475698.jpg)
 
 - Browser
     - Internet Explorer : 9 버전 이상
