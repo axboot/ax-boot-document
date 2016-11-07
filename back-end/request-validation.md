@@ -16,14 +16,20 @@ public Model save(@Valid @RequestBody Model request) {
 
 #### 2. Entity 클래스 (혹은 VO 클래스)에 검증 애너테이션을 추가합니다
 ```java
-@NotNull(message = "이름을 입력하세요.")
-private String name;
+public class User {
+    @NotEmpty(message = "id를 입력하세요.")
+    private String id;
+    
+    @NotEmpty(message = "이름을 입력하세요.")
+    private String name;
+        
+    ...
+}
+
 ```
 - 사용 가능한 애너테이션 목록
-
-![VALID_ANNOTATION.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/VALID_ANNOTATION.png)
-
->더 자세한 정보는 JSR-303과 Hibernate Validator문서를 참고하세요. - [JSR-303](https://jcp.org/en/jsr/detail?id=303) / [HibernateValidator](http://hibernate.org/validator/)]
+- ![VALID_ANNOTATION.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/VALID_ANNOTATION.png)
+- 더 자세한 정보는 JSR-303과 Hibernate Validator문서를 참고하세요. - [JSR-303](https://jcp.org/en/jsr/detail?id=303) / [HibernateValidator](http://hibernate.org/validator/)]
 ---
 
 #### 3. 예외 발생시 JSON으로 응답을 자동으로 생성해줍니다.
