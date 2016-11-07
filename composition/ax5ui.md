@@ -8,7 +8,7 @@ UI 프레임워크에는 다음과 같은 모듈이 포함되어 있습니다.
 
 
 ### Youtube Demo
-[![start.axboot.com 동영상 보기](../assets/axboot-youtube-02.jpg)](https://www.youtube.com/watch?v=7HDo_nVNQuc)
+[![start.axboot.com 동영상 보기](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/axboot-youtube-02.jpg)](https://www.youtube.com/watch?v=7HDo_nVNQuc)
 
 - Mask
     - 마스크는 요청을 처리하는 동안 사용자 인터랙션을 잠시동안 막고 UI에 변화를 주는 컴포넌트 입니다.

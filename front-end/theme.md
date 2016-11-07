@@ -27,5 +27,5 @@
 ```
 
 ### Youtube Demo
-[![start.axboot.com 동영상 보기](../assets/axboot-youtube-03.jpg)](https://www.youtube.com/watch?v=XXXn7Fw_DL8)
+[![start.axboot.com 동영상 보기](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/axboot-youtube-03.jpg)](https://www.youtube.com/watch?v=XXXn7Fw_DL8)
 

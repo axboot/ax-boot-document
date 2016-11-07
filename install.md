@@ -50,7 +50,7 @@
 ![axboot, 소스코드 생성하기 4](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/start-axboot-04.png)
 
 ### Youtube Demo
-[![start.axboot.com 동영상 보기](assets/axboot-youtube-01.jpg)](https://www.youtube.com/watch?v=n3F47DPyD5c)
+[![start.axboot.com 동영상 보기](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/axboot-youtube-01.jpg)](https://www.youtube.com/watch?v=n3F47DPyD5c)
 
 
 ## 소스코드 열기 (Eclipse / STS)
