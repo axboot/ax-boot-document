@@ -1,4 +1,4 @@
-# MyBatis 연동하기
+# MyBatis 사용하기
 
 AXBoot에는 다음과 같이 MyBatis 설정이 구성되어. MyBatis 사용을 원하시면 매퍼 XML과 인터페이스만 생성하시면 됩니다.
 

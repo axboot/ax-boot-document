@@ -25,5 +25,5 @@
     - [ModelExtractor 사용법](back-end/jpa-api.md)
     - [요청 데이터 검증하기](back-end/request-validation.md)
     - [API Tag 사용법](back-end/api-tag.md)
-    - [MyBatis 연동하기](back-end/mybatis.md)
+    - [MyBatis 사용하기](back-end/mybatis.md)
 * [빌드](build.md)
