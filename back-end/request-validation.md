@@ -1,10 +1,10 @@
 # @Valid 애너테이션을 통해 요청 데이터 검증하기
 
-### 1. PUT 요청을 처리하는 컨트롤러 메서드 파라미터에 @Valid 추가
+### 1. PUT 요청을 처리하는 컨트롤러 메서드 매개변수 @RequestBody 앞에 @Valid 추가
 ```java
 ... 
 
-public Model save(@Valid Model request) {
+public Model save(@Valid @RequestBody Model request) {
     service.saveProcess(request);
     return request;
 }
