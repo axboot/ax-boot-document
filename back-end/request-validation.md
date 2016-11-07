@@ -15,8 +15,15 @@ public Model save(@Valid @RequestBody Model request) {
 ---
 
 ### 2. Entity 클래스 (혹은 VO 클래스)에 검증 애너테이션을 추가합니다
-사용 가능한 애너테이션 목록
+```java
+@Comment(value = "이름")
+@NotNull(message = "이름을 입력하세요.")
+private String name;
+```
+- 사용 가능한 애너테이션 목록
+
 ![VALID_ANNOTATION.png](https://raw.githubusercontent.com/axboot/ax-boot-document/master/assets/VALID_ANNOTATION.png)
+
 >더 자세한 정보는 JSR-303과 Hibernate Validator문서를 참고하세요. - [JSR-303](https://jcp.org/en/jsr/detail?id=303) / [HibernateValidator](http://hibernate.org/validator/)]
 ---
 
