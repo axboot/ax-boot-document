@@ -39,4 +39,4 @@ var testJson = (function(s){return s})(${test});
 </c:forEach>
 ```
 
-api 태그의 실제 구현부 인 `api.tag`는 `WEB-INF > tags` 에 있습니다.
+`api.tag`는 `WEB-INF > tags` 에서 확인할 수 있습니다.
