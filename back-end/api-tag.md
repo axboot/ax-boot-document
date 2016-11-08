@@ -1,7 +1,7 @@
-# API Tag(기존 API 객체를 Wrapping하여 제공하는 태그)
+# API Tag
 
-비동기용으로 제작된 API들은 상황에 따란 페이지에서 동기코드로 써야할 때가 있습니다.
-`GET`메소드로 사용되는 API들에 대해서 다음의 `<ax:api>` 태그를 사용하여 문제를 해결 할 수 있습니다.
+AJAX API를 페이지가 호출 되는 시점에 '동기'로 API를 호출하고 싶을 경우, API 태그를 사용할 수 있습니다.
+`GET`메서드 API들는 다음 `<ax:api>` 태그를 사용하면, 간단한 형태로 JSON 혹은 Request Scope Variable로 데이터를 전달받을 수 있습니다
 
 ### Parameter
 - url : API URL (scheme, port를 제외한 Path와 QueryString 부분만 기술)
@@ -39,4 +39,4 @@ var testJson = (function(s){return s})(${test});
 </c:forEach>
 ```
 
-api 태그의 실제 구현부 인 `api.tag`는 `WEB-INF > tags` 에 있습니다.
+`api.tag`는 `WEB-INF > tags` 에서 확인할 수 있습니다.

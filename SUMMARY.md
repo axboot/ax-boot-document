@@ -23,6 +23,7 @@
     - [테마 변경하기](front-end/theme.md)
 * Back-end 개발 가이드
     - [ModelExtractor 사용법](back-end/jpa-api.md)
-    - [API Valid 사용하기](back-end/jpa-api-valid.md)
+    - [요청 데이터 검증하기](back-end/request-validation.md)
     - [API Tag 사용법](back-end/api-tag.md)
+    - [MyBatis 사용하기](back-end/mybatis.md)
 * [빌드](build.md)
