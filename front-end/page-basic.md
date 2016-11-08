@@ -84,7 +84,7 @@ AXBoot JSP페이지는 JSTL을 이용한 사용자정의 태그를 지원합니�
 ## ax:split-layout, ax:split-panel
 동적 크기 조정이 가능한 레이아웃 시스템을 제공합니다. 좌우/상하 레이아웃이 구현된 샘플은 [좌우레이아웃][상하레이아웃] 을 확인하세요.
 ```html
-<ax:split-layout name="ax1" oriental="vertical">
+<ax:split-layout name="ax1" orientation="vertical">
     <ax:split-panel width="300" style="padding-right: 10px;">
         너비가 300인 왼쪽 패널
     </ax:split-panel>
@@ -94,7 +94,7 @@ AXBoot JSP페이지는 JSTL을 이용한 사용자정의 태그를 지원합니�
         너비가 나머지인 오른쪽 패널 (건텐츠의 높이가 넘칠 경우 스크롤)
     </ax:split-panel>
 </ax:split-layout>
-<ax:split-layout name="ax1" oriental="horizontal">
+<ax:split-layout name="ax1" orientation="horizontal">
     <ax:split-panel height="300" style="padding-bottom: 10px;">
         높이가 300인 상단 패널
     </ax:split-panel>

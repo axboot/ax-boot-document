@@ -71,7 +71,7 @@
 ---
 
 ```html
-<ax:split-layout name="ax1" oriental="horizontal">
+<ax:split-layout name="ax1" orientation="horizontal">
     <ax:split-panel width="*" style="">
 
         <!-- 목록 -->
