@@ -11,9 +11,22 @@ AXBoot Initialzr를 통해 베이스 코드를 내려받고, IDE에서 소스코
 
 또한 로그인, 로그아웃, 세션관리, 사용자관리, 권한관리 등 웹 애플리케이션 개발에 항상 반복적인 부분을 확장가능한 형태로 미리 제공하며 역공항 모델 추출기능과 로깅, 슬로우 쿼리 감지 등 웹 애플리케이션 개발, 운영에 필요한 다양한 기능들을 함께 제공합니다.  
 
-> - Github : http://github.com/axboot , http://github.com/ax5ui
-> - Initialzr : http://start.axboot.com
-> - Demo : http://demo.axboot.com
+
+[AXBoot Demonstration](http://demo.axboot.com)
+> AXBoot Demonstration Site
+
+[AXBoot Initialzr](http://start.axboot.com)
+> AXBoot Project Initializer (like Spring Initialzr)
+
+[AXBoot Documentation](http://api.axboot.com)
+> AXBoot Documentation (now, Korean only)
+
+[AXBoot UI Framework](http://ax5.io)
+> AXBoot UI Framework Documentation (now, English only)
+
+[AXBoot User Group](https://www.facebook.com/groups/axboot/)
+> AXBoot Facebook User Group (Q&A or Communication)
+
 
 
 
