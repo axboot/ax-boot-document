@@ -1,6 +1,6 @@
 # gulpfile.js
 
-AXBoot는 프론드엔드 빌드 자동화 도구로 `Gulp`를 사용하고 있습니다.
+AXBoot는 프론트엔드 빌드 자동화 도구로 `Gulp`를 사용하고 있습니다.
 `gulpfile.js`는 Gulp의 설정 파일로서 여러 작업(task)들이 정의되어 있습니다.
 
 
