@@ -114,6 +114,7 @@ var ACTIONS = axboot.actionExtend(fnObj, {
         });
         return false;        
     },
+    // dispatch 함수는 생략 가능합니다.
     dispatch: function(){
         var result = ACTIONS.exec(caller, act, data);
         if (result != "error") {

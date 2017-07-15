@@ -555,14 +555,6 @@ var ACTION = axboot.actionExtend(fnObj, {
 var ACTION = axboot.actionExtend(fnObj, {
  PAGE_SEARCH: function(caller, act, data){
 
- },
- dispatch: function(caller, act, data){
-     var result = ACTIONS.exec(caller, act, data);
-     if(result != "error"){
-         return result;
-     } else {
-         return false;
-     }
  }
 });
 
