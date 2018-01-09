@@ -7,7 +7,7 @@
 
 AXBoot는 HTML5와 순수 자바스크립트 기술로 개발된 AX5UI와, 한국에서 가장 선호하는 자바, 스프링 에코시스템을 기반으로 누구나 쉽고 빠르게 웹 애플리케이션을 개발할 수 있도록 만들어진 풀 스택 프레임워크 입니다. 
 
-AXBoot Initialzr를 통해 베이스 코드를 내려받고, IDE에서 소스코드를 임포트하고, 서버를 실행하는 데까지 채 5분이 걸리지 않으며, 미리 구성된 프레임워크 설정과 UI 컴포넌트, 레이아웃 시스템 덕분에, 샘플 예제를 기반으로 즉시 개발을 시작할 수 있습니다. 
+AXBoot Initializr를 통해 베이스 코드를 내려받고, IDE에서 소스코드를 임포트하고, 서버를 실행하는 데까지 채 5분이 걸리지 않으며, 미리 구성된 프레임워크 설정과 UI 컴포넌트, 레이아웃 시스템 덕분에, 샘플 예제를 기반으로 즉시 개발을 시작할 수 있습니다. 
 
 또한 로그인, 로그아웃, 세션관리, 사용자관리, 권한관리 등 웹 애플리케이션 개발에 항상 반복적인 부분을 확장가능한 형태로 미리 제공하며 역공학 모델 추출기능과 로깅, 슬로우 쿼리 감지 등 웹 애플리케이션 개발, 운영에 필요한 다양한 기능들을 함께 제공합니다. 
 
@@ -15,8 +15,8 @@ AXBoot Initialzr를 통해 베이스 코드를 내려받고, IDE에서 소스코
 [AXBoot Demonstration](http://demo.axboot.com)
 > AXBoot Demonstration Site
 
-[AXBoot Initialzr](http://start.axboot.com)
-> AXBoot Project Initializer (like Spring Initialzr)
+[AXBoot Initializr](http://start.axboot.com)
+> AXBoot Project Initializr (like Spring Initializr)
 
 [AXBoot Documentation](http://api.axboot.com)
 > AXBoot Documentation (now, Korean only)
